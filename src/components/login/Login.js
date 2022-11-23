@@ -4,7 +4,9 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 export const Login = ({
   handleOnChange,
   handleOnSubmit,
-  formSwitcher
+  formSwitcher,
+  email,
+  pass
 }) => {
   return (
     <Container>
@@ -19,6 +21,7 @@ export const Login = ({
                 type="email"
                 name="email"
                 placeholder="Enter Email"
+                value={email}
                 onChange={handleOnChange}
                 required
               />
@@ -29,6 +32,7 @@ export const Login = ({
                 type="password"
                 name="password"
                 placeholder="password"
+                value={pass}
                 onChange={handleOnChange}
                 required
               />

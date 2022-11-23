@@ -10,6 +10,7 @@ export const Entry = () => {
   const [frmLoad, setFrmLoad] = useState("login");
 
   const handleOnChange = (e) => {
+    console.log(e.target);
     const { name, value } = e.target;
     console.log(name,value);
 
@@ -38,6 +39,7 @@ export const Entry = () => {
     console.log(email, password);
   };
   const handleOnResetSubmit = (e) => {
+    console.log(e);
     e.preventDefault();
 
     if (!email) {
@@ -59,6 +61,8 @@ export const Entry = () => {
             handleOnChange={handleOnChange}
             handleOnSubmit={handleOnSubmit}
             formSwitcher={formSwitcher}
+            email={email}
+            pass={password}
           />
         )}
 
@@ -67,6 +71,7 @@ export const Entry = () => {
             handleOnChange={handleOnChange}
             handleOnResetSubmit={handleOnResetSubmit}
             formSwitcher={formSwitcher}
+            email={email}
           />
         )}
       </Jumbotron>

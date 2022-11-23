@@ -5,7 +5,8 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 export const ResetPassword = ({
     handleOnChange,
     handleOnResetSubmit,
-    formSwitcher
+    formSwitcher,
+    email
   }) => {
   return (
     <Container>
@@ -20,6 +21,7 @@ export const ResetPassword = ({
                 type="email"
                 name="email"
                 placeholder="Enter Email"
+                value={email}
                 onChange={handleOnChange}
                 required
               />
@@ -33,7 +35,7 @@ export const ResetPassword = ({
 
       <Row>
         <Col>
-          <a href="#!" onClick={() => formSwitcher("login")}>
+          <a href="#!" onClick={()=>formSwitcher("login")}>
             Login Now
           </a>
         </Col>
