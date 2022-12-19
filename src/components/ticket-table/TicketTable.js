@@ -6,7 +6,7 @@ export const TicketTable = ({ tickets }) => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
+          <th>S.No.</th>
           <th>Subjects</th>
           <th>Status</th>
           <th>Opened Date</th>
